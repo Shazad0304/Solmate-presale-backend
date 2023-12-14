@@ -10,14 +10,13 @@ dotenv.config({
 
 import logger from "./utils/logger";
 import { PORT_NUMBER } from "./config";
-const  { router } = require("./services");
-
+import router from "./services";
 
 // create express app
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.set('/', router);
+app.use('/', router);
 
 app.listen(PORT_NUMBER);
 

@@ -1,1 +1,1 @@
-export * from './routes';
+export default require("./routes");
